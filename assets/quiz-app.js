@@ -168,7 +168,7 @@ function finish() {
     '</div>' +
     '<p class="tagline">' + a.tagline + '</p>' +
     '<div class="matchbox"><div class="num">' + r.match + '<i>%</i></div>' +
-      '<div class="cap">与「' + r.name + '」的原型吻合50<br>基于 16 项作答的加权结果</div></div>' +
+      '<div class="cap">与「' + r.name + '」的原型吻合度<br>基于 16 项作答的加权结果</div></div>' +
     '<div class="bars">' + barsHTML(r.dims) + '</div>' +
     (r.extreme ? '<div class="extreme"><span>隐藏形态</span><b>' + r.extreme.label + '</b><span>' + r.extreme.note + '</span></div>' : '') +
     '<div class="block"><h3>同事眼中的你<small>OTHERS SEE</small></h3><p>' + a.colleagues + '</p></div>' +
