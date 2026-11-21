@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>你更像《璀璨之城》里的谁 · 16 题人物匹配</title>
+<meta name="description" content="16 道场景题，测你在豪门与权力局里会怎么选，对应《璀璨之城》8 位人物，外加明面与幕后两种形态。全程无注册，答案不出本机。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="你更像《璀璨之城》里的谁 · 16 题人物匹配">
+<meta property="og:description" content="不是问你喜欢谁，是问你在那种局里会怎么做。">
+<meta name="theme-color" content="#D7DCD2">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23141C17'/%3E%3Crect x='9' y='9' width='46' height='46' fill='none' stroke='%23A63A2B' stroke-width='4'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<main class="sheet" id="sheet">
+  <div class="dochead">
+    <div>FORM<b>TC-PERS-16</b></div>
+    <div>REV.<b>2026 / 11</b></div>
+    <div>ITEMS<b>16</b></div>
+    <div>STATUS<b id="docStatus">未填写</b></div>
+  </div>
+
+  <!-- ===== 视图：封面 ===== -->
+  <section class="cover pad" id="viewCover">
+    <div class="kicker"><span class="dot"></span>CHARACTER MATCH / 20 集人物档案</div>
+    <h1>璀璨之城<br>人物档案<em>你 更 像 谁</em></h1>
+    <p class="lede">16 道题，问的不是你喜欢谁，是<strong>你在那种局里会怎么做</strong>。测出你更像 8 位人物里的哪一位，以及你是明面上那一个，还是背地里那一个。约 3 分钟，全程无注册。</p>
+
+    <div class="blankform" aria-hidden="true">
+      <div class="row"><div class="k">受检人</div><div class="v">— 追剧的人 / 看过二十集的人 —</div></div>
+      <div class="row"><div class="k">检测场景</div><div class="v">— 一张长桌、一间会议室、一场婚礼 —</div></div>
+      <div class="row"><div class="k">体检项目</div><div class="v"><small>目标 · 手段 · 情感 · 姿态 四项</small></div></div>
+      <div class="row"><div class="k">出具日期</div><div class="v" id="todayText">—</div></div>
+    </div>
+
+    <button class="cta" id="startBtn">开始匹配</button>
+    <p class="note">本报告由你的选择即时生成，仅供影迷自娱与朋友间玩笑，不代表剧中人物的官方设定，也不构成任何性格评价、人际能力判断或心理诊断依据。</p>
+
+    <div class="covermeta">
+      <div class="steps">
+        01 答题：16 项，每题五档<br>
+        02 出份：四维倾向 + 匹配度<br>
+        03 归档：生成你的角色代号
+      </div>
+      <div class="seal">人物档案章<span>NO.0001</span></div>
+    </div>
+  </section>
+
+  <!-- ===== 视图：答题 ===== -->
+  <section class="quiz pad" id="viewQuiz" hidden>
+    <div class="qtop"><span id="qIndex">第 01 / 16 项</span><span id="qTag">场景</span></div>
+    <div class="qbar"><i id="qFill" style="width:0%"></i></div>
+    <div class="qtext" id="qText"></div>
+    <div class="opts" id="qOpts"></div>
+    <div class="qfoot">
+      <button class="linkish" id="prevBtn">上一项</button>
+      <span class="hint">按你真实会做的选，别按「这样比较体面」选</span>
+    </div>
+  </section>
+
+  <!-- ===== 视图：结果 ===== -->
+  <section class="result pad" id="viewResult" hidden></section>
+</main>
+
+<footer>
+  <div>非官方影迷向测试 · 角色与剧情版权归 TVB 所有 · 题库与文案为本项目原创</div>
+  <div class="r">TC-PERS-16 / 娱乐测试</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets/quiz-data.js"></script>
+<script src="assets/quiz-app.js"></script>
+
+</body>
+</html>
