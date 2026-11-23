@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>十月初五的月光 · 人物档案：12 道二选一，你更像这条街上的谁</title>
+<meta name="description" content="12 道二选一，没有「像 / 不像」，只有两个做法。测你更像《十月初五的月光》里哪一个人，以及你是留在原地的那一个，还是走远了的那一个。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="十月初五的月光 · 人物档案">
+<meta property="og:description" content="不问你喜欢谁，只问你遇到那种事会怎么选。">
+<meta name="theme-color" content="#D7DCD2">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23141C17'/%3E%3Ccircle cx='32' cy='28' r='13' fill='none' stroke='%23D8C07A' stroke-width='3'/%3E%3Crect x='12' y='48' width='40' height='3' fill='%23A63A2B'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/quiz.css">
+<style>
+#qOpts{display:grid;gap:10px;margin:20px 0 0;border-top:1px solid var(--line);padding-top:18px}
+.abtn{display:grid;grid-template-columns:24px 1fr;gap:12px;align-items:start;text-align:left;width:100%;
+  padding:15px 14px;background:rgba(255,255,255,.42);border:1px solid var(--line);color:var(--ink);
+  font-family:var(--sans);font-size:15px;line-height:1.75;cursor:pointer;transition:background .12s,color .12s,border-color .12s}
+.abtn .k{font-family:var(--mono);font-size:11px;color:var(--ink-3);padding-top:5px}
+.abtn:hover{background:rgba(20,28,23,.05)}
+.abtn.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.abtn.on .k{color:rgba(241,242,237,.6)}
+@media (max-width:520px){.abtn{font-size:14.5px}}
+</style>
+</head>
+<body>
+<main class="sheet" id="sheet">
+  <div class="dochead">
+    <div>FORM<b>MO-PERS-12</b></div>
+    <div>REV.<b>2026 / 11</b></div>
+    <div>ITEMS<b>12</b></div>
+    <div>STATUS<b id="docStatus">未填写</b></div>
+  </div>
+
+  <!-- ===== 视图：封面 ===== -->
+  <section class="cover pad" id="viewCover">
+    <div class="kicker"><span class="dot"></span>MOONLIGHT MATCH / 澳门街 · 20 集</div>
+    <h1>十月初五<br>的月光<em>人 物 档 案</em></h1>
+    <p class="lede">12 道二选一。没有「像 / 不像」的刻度，只有两个做法，你选一个。测你更像这条街上的哪一个人，以及你是<strong>留在原地的那一个</strong>，还是走远了的那一个。</p>
+
+    <div class="blankform" aria-hidden="true">
+      <div class="row"><div class="k">受检人</div><div class="v">— 街坊 / 路过的人 —</div></div>
+      <div class="row"><div class="k">检测场景</div><div class="v">— 澳门，一条叫十月初五的街 —</div></div>
+      <div class="row"><div class="k">体检项目</div><div class="v"><small>表达 · 姿态 · 待人 · 底色 四项</small></div></div>
+      <div class="row"><div class="k">出具日期</div><div class="v" id="todayText">—</div></div>
+    </div>
+
+    <button class="cta" id="startBtn">开始二选一</button>
+    <p class="note">本报告由你的选择即时生成，仅供影迷自娱与朋友间玩笑，不代表剧中人物的官方设定，也不构成任何性格评价或心理诊断依据。</p>
+
+    <div class="covermeta">
+      <div class="steps">
+        01 答题：12 项，每项 A / B<br>
+        02 出份：四维倾向 + 匹配度<br>
+        03 归档：生成你的街坊代号
+      </div>
+      <div class="seal">月光档案章<span>NO.0001</span></div>
+    </div>
+  </section>
+
+  <!-- ===== 视图：答题 ===== -->
+  <section class="quiz pad" id="viewQuiz" hidden>
+    <div class="qtop"><span id="qIndex">第 01 / 12 项</span><span id="qTag">哨子</span></div>
+    <div class="qbar"><i id="qFill" style="width:0%"></i></div>
+    <div class="qtext" id="qText">换成你，会选哪一边</div>
+    <div id="qOpts"></div>
+    <div class="qfoot">
+      <button class="linkish" id="prevBtn">上一项</button>
+      <span class="hint">两个都不完美才对，选你更会做的那个</span>
+    </div>
+  </section>
+
+  <!-- ===== 视图：结果 ===== -->
+  <section class="result pad" id="viewResult" hidden></section>
+</main>
+
+<footer>
+  <div>非官方影迷向测试 · 角色与剧情版权归 TVB 所有 · 题库与文案为本项目原创</div>
+  <div class="r">MO-PERS-12 / 娱乐测试</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets/quiz-data.js"></script>
+<script src="assets/quiz-app.js"></script>
+
+</body>
+</html>
