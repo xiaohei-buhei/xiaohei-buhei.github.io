@@ -94,14 +94,16 @@ function renderQuestion() {
   document.getElementById('qIndex').textContent = '第 ' + String(state.idx + 1).padStart(2, '0') + ' / ' + QUESTIONS.length + ' 项';
   document.getElementById('qTag').textContent = q.tag;
   document.getElementById('qFill').style.width = ((state.idx + 1) / QUESTIONS.length * 100) + '%';
-  document.getElementById('qText').textContent = '换成你，会选哪一边';
+  document.getElementById('qText').innerHTML = q.s;
   const cur = state.answers[state.idx];
-  document.getElementById('qOpts').innerHTML = ['a', 'b'].map(k =>
-    '<button class="abtn' + (cur === k ? ' on' : '') + '" data-k="' + k + '" type="button">' +
-      '<span class="k">' + (k === 'a' ? 'A' : 'B') + '</span>' +
-      '<span class="t">' + q[k].t + '</span>' +
-    '</button>'
-  ).join('');
+  document.getElementById('qOpts').innerHTML =
+    '<div style="font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--ink-3);margin-bottom:2px">换成你 · 你会怎么做</div>' +
+    ['a', 'b'].map(k =>
+      '<button class="abtn' + (cur === k ? ' on' : '') + '" data-k="' + k + '" type="button">' +
+        '<span class="k">' + (k === 'a' ? 'A' : 'B') + '</span>' +
+        '<span class="t">' + q[k].t + '</span>' +
+      '</button>'
+    ).join('');
   document.getElementById('prevBtn').style.visibility = state.idx === 0 ? 'hidden' : 'visible';
   docStatus.textContent = '填写中 ' + String(state.idx + 1).padStart(2, '0') + '/12';
   viewQuiz.querySelectorAll('.abtn').forEach(btn => {
